@@ -25,13 +25,11 @@
 </body>
 </html>
 
-
 <style>
-
-  body{
+body{
     margin: 0;
     padding: 0;
-    font-family: "Tahoma";
+    font-family: "Sans-serif";
     height: auto;
     display: flex;
     align-items: center;
@@ -100,7 +98,7 @@
        
 }
 
-.containerTop h1{
+.containerTop h1 {
     max-width: 530px;
     position: absolute;
     line-height: .9;
@@ -109,7 +107,6 @@
 @media screen and (min-width: 601px) {
   div.containerTop h1 {
     font-size: calc(8px + 7vw);
-    line-height: .9;
     left: 10%;
     top: 25%;
   }
@@ -145,7 +142,7 @@
     top: 75%;
   }
 }
-
+  
 .boxHotspots{
     border: 0px solid khaki;
     width: 100%;
@@ -170,7 +167,8 @@
     position: absolute;
     animation: pulse 1.5s infinite;
     cursor: pointer;
-}
+    
+  }
 
 .watch{
     left: 19%;
@@ -203,19 +201,18 @@
 
 .hotspot::before{
     content: attr(text);
-    width: 79px;
-    max-width: 80px;
-    height: 79px;
+    width: max-content;
     position: absolute;
-    background-color: #c2ff56;
-    color: #fff;
+    background-color: #c2ff5670;
+    color: #101010;
     left: 50%;
     transform: translateX(-50%);
     top: 30px;
     padding: 8px 20px;
-    font-size: 14px;
-    border-radius: 50%;
-    display: none;
+    font-size: 0px;
+    border-radius: 10%;
+    opacity: 0;  
+    
 }
 
 .hotspot::after{
@@ -227,12 +224,16 @@
     top: 24px;
     left: 50%;
     transform: translateX(-50%);
-    display: none;
+    
 }
 
 .hotspot:hover::before,
 .hotspot:hover::after{
-    display: block;
+    width: max-content;
+    font-size: 3vw;
+    border-radius: 10%;
+    opacity: 1;
+    transition: 0.7s ease-in-out;
+   
 }
-
 </style>
