@@ -21,6 +21,10 @@
     коллекция
   </div></h1><br>
       <h2 class="animate__animated animate__slideInDown">Женский пуховик с уютным капюшоном!</h2>
+      
+  <div class="secondBox">
+        <img src="https://a.radikal.ru/a38/2010/dd/68a2bd715d59.png" alt="">
+    </div>
       </div>
 </body>
 </html>
@@ -35,9 +39,13 @@ body{
     align-items: center;
     justify-content: center;
 }
+  .secondBox img{
+    position: relative;
+    width: 100vw;
+  }
 
 .block-effect {
-  font-size: calc(8px + 6vw);
+  
 }
 .block-reveal {
   --t: calc(var(--td) + var(--d));
@@ -106,38 +114,39 @@ body{
   }
 @media screen and (min-width: 601px) {
   div.containerTop h1 {
-    font-size: calc(8px + 7vw);
+    font-size: 8vmax;
     left: 10%;
-    top: 25%;
+    top: 35%;
   }
 }
 
 @media screen and (max-width: 600px) {
   div.containerTop h1 {
-    font-size: 9vw;
+   font-size: 5vmax;
    transform: rotate(90deg);
-   line-height: .9;
    left: -10%;
-    top: 10%;
+   top: 10%;
   }
 }
      
 .containerTop h2{
     max-width: 530px;
     position: absolute;
+    line-height: .9;
         
   }
 @media screen and (min-width: 601px) {
   div.containerTop h2 {
-    font-size: calc(8px + 1.5vw);
+    font-family: "Arial";
+    font-size: 4.2vmin;
     left: 10%;
-    top: 61%;
+    top: 75%;
   }
 }
 
 @media screen and (max-width: 600px) {
   div.containerTop h2 {
-    font-size: 3.9vw;
+    font-size: 3vmin;
     left: 10%;
     top: 75%;
   }
@@ -205,9 +214,8 @@ body{
     position: absolute;
     background-color: #c2ff5670;
     color: #101010;
-    left: 50%;
     transform: translateX(-50%);
-    top: 30px;
+    bottom: 30px;
     padding: 8px 20px;
     font-size: 0px;
     border-radius: 10%;
@@ -221,8 +229,6 @@ body{
     border-width: 0 8px 6px;
     border-style: solid;
     position: absolute;
-    top: 24px;
-    left: 50%;
     transform: translateX(-50%);
     
 }
@@ -230,8 +236,9 @@ body{
 .hotspot:hover::before,
 .hotspot:hover::after{
     width: max-content;
-    font-size: 3vw;
-    border-radius: 10%;
+    max-width: 120px;
+    font-size: 2.5vmin;
+    border-radius: 5%;
     opacity: 1;
     transition: 0.7s ease-in-out;
    
