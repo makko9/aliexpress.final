@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <div class="containerTop">
+      <div class="boxHotspots">
+        <img src="https://a.radikal.ru/a38/2010/dd/68a2bd715d59.png" alt="">
+        <div class="hotspot watch" text="рукава с ветрозащитой"></div>
+        <div class="hotspot laptop" text="ткань дышит но не продувается"></div>
+        <div class="hotspot mouse" text="удобные карманы"></div>
+        <div class="hotspot vase" text="высокий воротник и плотный капюшон"></div>
+      </div>
+      <h1 class="block-effect" style="--td: 1.2s">
+  <div class="block-reveal" style="--bc: #f1f1f1b0; --d: .1s">
+    Новая</div>
+    <div class="block-reveal" style="--bc: #030303b0; --d: .5s">
+    коллекция
+  </div></h1><br>
+      <h2 class="animate__animated animate__slideInDown">Женский пуховик с уютным капюшоном!</h2>
+      </div>
+</body>
+</html>
+
+<style>
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Sans-serif";
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.block-effect {
+  font-size: calc(8px + 6vw);
+}
+.block-reveal {
+  --t: calc(var(--td) + var(--d));
+  color: #0f0f0f;
+  padding: 4px;
+  position: relative;
+  overflow: hidden;
+  animation: revealBlock 0s var(--t) forwards;
+}
+
+.block-reveal::after {
+  content: '';
+  width: 0%;
+  height: 100%;
+  padding-bottom: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--bc);
+  animation: revealingIn var(--td) var(--d) forwards, revealingOut var(--td) var(--t) forwards;
+}
+
+/* animations */
+@keyframes revealBlock {
+  100% {
+    color: #0f0f0f;
+  }
+}
+@keyframes revealingIn {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes revealingOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.containerTop{
+    position: relative;
+    border: 0px solid tomato;
+    width: 100%;
+    max-width: 930px;
+    min-width: 120px;
+    height: 100vh;
+    max-height: 663px;
+    font-family: "Tahoma";
+    color: #0f0f0f;
+    align-items: center;
+    justify-content: center;
+       
+}
+
+.containerTop h1{
+    max-width: 530px;
+    position: absolute;
+        
+  }
+@media screen and (min-width: 601px) {
+  div.containerTop h1 {
+    font-size: 80px;
+    left: 10%;
+    top: 25%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.containerTop h1 {
+    font-size: 45px;
+    left: 10%;
+    top: 25%;
+  }
+}
+     
+.containerTop h2{
+    max-width: 530px;
+    position: absolute;
+        
+  }
+@media screen and (min-width: 601px) {
+  div.containerTop h2 {
+    font-size: 40px;
+    left: 10%;
+    top: 70%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.containerTop h2 {
+    font-size: 20px;
+    left: 10%;
+    top: 60%;
+  }
+}
+
+.boxHotspots{
+    border: 0px solid khaki;
+    width: 100%;
+    max-width: 451px;
+    position: relative;
+    margin: auto;
+    margin-right: 0%;
+                   
+}
+
+.boxHotspots img{
+    width: 100%;
+    position: relative;
+   
+}
+
+.hotspot{
+    width: 20px;
+    height: 20px;
+    background-color: #c2ff56;
+    border-radius: 50%;
+    position: absolute;
+    animation: pulse 1.5s infinite;
+    cursor: pointer;
+}
+
+.watch{
+    left: 19%;
+    bottom: 32%;
+}
+
+.laptop{
+    right: 15%;
+    top: 37%;
+}
+
+.mouse{
+    right: 24%;
+    bottom: 22%;
+}
+
+.vase{
+    right: 35%;
+    top: 11%;
+}
+
+@keyframes pulse{
+    from{
+        box-shadow: 0 0 0 0 #c2ff56;
+    }
+    to{
+        box-shadow: 0px 0px 0px 20px #c2ff5600;
+    }
+}
+
+.hotspot::before{
+    content: attr(text);
+    width: 79px;
+    max-width: 80px;
+    height: 79px;
+    position: absolute;
+    background-color: #c2ff56;
+    color: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30px;
+    padding: 8px 20px;
+    font-size: 14px;
+    border-radius: 50%;
+    display: none;
+}
+
+.hotspot::after{
+    content: "";
+    border-color: transparent transparent #c2ff5610;
+    border-width: 0 8px 6px;
+    border-style: solid;
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.hotspot:hover::before,
+.hotspot:hover::after{
+    display: block;
+}
+</style>
