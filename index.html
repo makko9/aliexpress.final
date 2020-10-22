@@ -36,17 +36,17 @@ body{
     font-family: "Sans-serif";
     height: auto;
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
+   
+  }
   .secondBox img{                      /* оставновился здесь */
     position: relative;
     width: 100vw;
   }
 
-.block-effect {
-  
-}
+  .block-reveal {
+    textt-align: right;
+  }
+
 .block-reveal {
   --t: calc(var(--td) + var(--d));
   color: #0f0f0f;
@@ -54,6 +54,7 @@ body{
   position: relative;
   overflow: hidden;
   animation: revealBlock 0s var(--t) forwards;
+  
 }
 
 .block-reveal::after {
@@ -97,7 +98,7 @@ body{
     width: 100%;
     max-width: 930px;
     min-width: 120px;
-    height: 100vh;
+    height: 663px;
     max-height: 663px;
     font-family: "Tahoma";
     color: #0f0f0f;
@@ -112,11 +113,11 @@ body{
     line-height: .9;
         
   }
-@media screen and (min-width: 601px) {    /* Заголовки h1 h2 */
+@media screen and (min-width: 601px) {
   div.containerTop h1 {
     font-size: 6.7vmax;
-    left: 10%;
-    top: 35%;
+    left: 40px;
+    top: 240px;
   }
 }
 
@@ -132,15 +133,15 @@ body{
 .containerTop h2{
     max-width: 530px;
     position: absolute;
-    line-height: .9;
+    line-height: 3.9;
         
   }
 @media screen and (min-width: 601px) {
   div.containerTop h2 {
     font-family: "Arial";
     font-size: 4.2vmin;
-    left: 10%;
-    top: 75%;
+    left: 40px;
+    top: 420px;
   }
 }
 
@@ -180,8 +181,8 @@ body{
   }
 
 .watch{
-    left: 10%;
-    bottom: 20%;
+    left: 19%;
+    bottom: 36%;
 }
 
 .laptop{
